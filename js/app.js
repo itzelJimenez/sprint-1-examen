@@ -1,8 +1,9 @@
+var estudiantes = [];
 function obtenerListaEstudiantes() {
     // TO DO: Retornar la lista de estudiantes
-    
+
     return estudiantes;
-}   
+}
 function agregarEstudiante() {
     // TO DO: Preguntar al usuario por el nombre, puntos técnicos y puntos de HSE de un estudiante
     // Hint: El estudiante debe ser agregado a la lista de estudiantes
@@ -17,16 +18,16 @@ function agregarEstudiante() {
             "nombreDeEstudiante": nombreDeEstudiante,
             "porcentajeTecnico": porcentajeTecnico,
             "porcentajeHSE": porcentajeHSE
-        }; 
+        };
         estudiantes.push(estudiante);
     return estudiante;
         //MEDIANTE EL MÉTODO PUSH SE AGREGARÁ EN CADA ITERACIÓN EL OBJETO ESTUDIANTE CON LAS CORRESPONDIENTES PROPIEDADES AL ARREGLO ESTUDIANTES.
-    
-   
+
+
 }
 
 function mostrar(estudiante) {
-    // TO DO: Completar el template para que muestre las propiedades correctas del estudiante 
+    // TO DO: Completar el template para que muestre las propiedades correctas del estudiante
     var resultado = "";
     resultado += "<div class='row'>";
     resultado += "<div class='col m12'>";
@@ -47,7 +48,7 @@ function mostrarLista(estudiantes) {
     // Retornar el template de todos los estudiantes
   /*  var resultado = "";
     for( var i = 0 ; i<estudiantes.length;i++){
-        resultado += mostrar(estudiantes[i]);        
+        resultado += mostrar(estudiantes[i]);
 
 
     }  return resultado;
@@ -64,9 +65,9 @@ function buscar(nombre, estudiantes) {
     // Retornar el objeto del estudiante buscado
     // Nota: NO IMPORTA SI EL USUARIO ESCRIBE EL NOMBRE EN MAYÚSCULAS O MINÚSCULAS
     var algoDePrueba = estudiantes.filter(function(alumno){
-        return alumno.nombre.toLowerCase() == nombre.toLowerCase();
+        return alumno.nombreDeEstudiante.toLowerCase() == nombre.toLowerCase();
     });
-    return algoDePrueba; 
+    return algoDePrueba;
 }
 
 function topTecnico(estudiantes) {
@@ -74,7 +75,7 @@ function topTecnico(estudiantes) {
     var ordenPorTopTecnico = estudiantes.sort(function(a, b){
         return b.porcentajeTecnico - a.porcentajeTecnico;
         });
-                        
+
     return ordenPorTopTecnico;
 }
 function topHSE(estudiantes) {
@@ -82,6 +83,6 @@ function topHSE(estudiantes) {
         var ordenPorHSE =  estudiantes.sort(function(a, b){
         return b.porcentajeHSE - a.porcentajeHSE;
         });
-                        
+
     return ordenPorHSE;
 }
